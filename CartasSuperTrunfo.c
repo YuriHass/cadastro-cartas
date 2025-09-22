@@ -13,7 +13,8 @@ int main() {
   // Área para definição das variáveis para armazenar as propriedades das cidades
   char card_1_state, card_2_state;
   char card_1_code[4], card_2_code[4], card_1_name[50], card_2_name[50];
-  int card_1_population, card_2_population, card_1_tourist_attractions, card_2_tourist_attractions;
+  unsigned long int card_1_population, card_2_population;
+  int card_1_tourist_attractions, card_2_tourist_attractions;
   float card_1_area, card_2_area, card_1_pib, card_2_pib, card_1_density, card_2_density, card_1_pib_capita, card_2_pib_capita;
 
   // Área para entrada de dados da cidade 1
@@ -29,7 +30,7 @@ int main() {
   card_1_name[strcspn(card_1_name, "\n")] = 0;
 
   printf("Insira a população da cidade: ");
-  scanf("%d", &card_1_population);
+  scanf("%ld", &card_1_population);
 
   printf("Insira a área (km²) da cidade: ");
   scanf("%f", &card_1_area);
@@ -56,7 +57,7 @@ int main() {
   card_2_name[strcspn(card_2_name, "\n")] = 0;
 
   printf("Insira a população da cidade: ");
-  scanf("%d", &card_2_population);
+  scanf("%ld", &card_2_population);
 
   printf("Insira a área (km²) da cidade: ");
   scanf("%f", &card_2_area);
